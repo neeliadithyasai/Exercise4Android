@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="145dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="Enter First Name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.319"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163" />
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="145dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="Enter Last Name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163" />
+        <Spinner
+            android:id="@+id/spEmployment"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFirstName"
+            app:layout_constraintVertical_bias="0.034" />
+        <Spinner
+            android:id="@+id/spDesignation"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spEmployment"
+            app:layout_constraintVertical_bias="0.106" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employment Status"
+            app:layout_constraintBottom_toTopOf="@+id/spEmployment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.952" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation List"
+            app:layout_constraintBottom_toTopOf="@+id/spDesignation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spEmployment"
+            app:layout_constraintVertical_bias="0.811" />
+        <EditText
+            android:id="@+id/edtStreet"
+            android:layout_width="176dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="36dp"
+            android:ems="10"
+            android:hint="Street Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/edtHouse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spDesignation" />
+        <EditText
+            android:id="@+id/edtHouse"
+            android:layout_width="176dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="H.No"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtStreet"
+            app:layout_constraintTop_toBottomOf="@+id/spDesignation"
+            app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="120dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtStreet"
+            app:layout_constraintVertical_bias="0.145" />
+        <EditText
+            android:id="@+id/edtProvince"
+            android:layout_width="120dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="Province"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtStreet"
+            app:layout_constraintVertical_bias="0.145" />
+        <EditText
+            android:id="@+id/edtCountry"
+            android:layout_width="120dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="Country"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.972"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtStreet"
+            app:layout_constraintVertical_bias="0.145" />
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="392dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Enter Email Address"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPostal" />
+        <EditText
+            android:id="@+id/edtPostal"
+            android:layout_width="166dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Postal Code"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtProvince"
+            app:layout_constraintVertical_bias="0.119" />
+        <EditText
+            android:id="@+id/edtMobile"
+            android:layout_width="166dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtProvince"
+            app:layout_constraintVertical_bias="0.117" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
