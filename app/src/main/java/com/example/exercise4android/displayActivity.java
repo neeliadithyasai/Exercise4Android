@@ -38,6 +38,7 @@ public class displayActivity extends AppCompatActivity {
         String DT = extras.getString("pickedDate");
         String IS = extras.getString("Issues");
         String DD = extras.getString("DetailDescription");
+        Float r = extras.getFloat("rating");
 
 
 
@@ -46,7 +47,7 @@ public class displayActivity extends AppCompatActivity {
         details.setText("*********COMPLAINT FORM*******" +
                 "**********\n"+"Name of Complainer:    "+su+ " "+FN+" "+LN+"\nEmployment status:    "+ES+"\nDesignation:    "+DS+"\nStreet no:    "+SNO+"\nStreet Name:    "+SN+"\nProvince:    "+
                 P+"\nCity:    "+CI+"\nCountry:    "+CY+"\nPostal code:    "+PC+"\nEmail:    "+EM+"\nCountry Code:    "+CYC
-        +"\nCell Number:    "+CNO+"\nComplaint Issue Date:    "+DT+"\nIssues:    "+IS+"\nDetailed Description:    "+DD);
+        +"\nCell Number:    "+CNO+"\nComplaint Issue Date:    "+DT+"\nIssues:    "+IS+"\nSeverity:    "+r+"\nDetailed Description:    "+DD);
         details.setTextColor(Color.BLACK);
         details.setTextSize(18);
 

@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView countrycode;
     private  TextView cellnumber;
     private TextView Datetxt;
+    private RatingBar rating;
     private TextView detailDescription;
+    private Button CLear;
 
 
 
@@ -77,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         Datetxt = findViewById(R.id.txtdate);
         detailDescription = findViewById(R.id.txtdescription);
         submit = findViewById(R.id.btnSubmit);
+        rating = findViewById(R.id.ratingBar);
+        CLear = findViewById(R.id.btnClear);
 
         ArrayAdapter<String>mStringArrayAdapter = new ArrayAdapter<>(MainActivity.this,
                 android.R.layout.simple_spinner_dropdown_item, suffixarray);
@@ -135,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "onNothingSelected", Toast.LENGTH_SHORT).show();
             }
         });
+
         ArrayAdapter<String>iStringArrayAdapter = new ArrayAdapter<>(MainActivity.this,
                 android.R.layout.simple_spinner_dropdown_item, issuearray);
 
@@ -190,11 +196,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
         submit.setOnClickListener(new View.OnClickListener()
         {
 
             @Override
             public void onClick(View v) {
+
+                
 
 
 
@@ -236,12 +247,40 @@ public class MainActivity extends AppCompatActivity {
                 extras.putString("pickedDate",selecteddate);
                 extras.putString("Issues",selectedissueItem);
                 extras.putString("DetailDescription",DetailDescription);
+                extras.putFloat("rating", rating.getRating());
                 mIntent.putExtras(extras);
                 startActivity(mIntent);
              
 
             }
         });
+
+
+        CLear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                firstname.setText("");
+                lastname.setText("");
+                streetNo.setText("");
+                streetName.setText("");
+                province.setText("");
+                city.setText("");
+                country.setText("");
+                postalcode.setText("");
+                email.setText("");
+                countrycode.setText("");
+                cellnumber.setText("");
+                Datetxt.setText("");
+                detailDescription.setText("");
+
+
+
+
+
+            }
+        });
+
 
 
 
