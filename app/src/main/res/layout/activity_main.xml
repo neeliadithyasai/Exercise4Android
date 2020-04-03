@@ -190,13 +190,14 @@
                         android:layout_height="wrap_content"
                         android:text=" issue date" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/txtdate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:hint="dd/mm/yy" />
+
                 </TableRow>
 
                 <TableRow android:layout_marginTop="10dp">

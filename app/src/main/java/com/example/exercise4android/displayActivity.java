@@ -35,6 +35,7 @@ public class displayActivity extends AppCompatActivity {
         String EM = extras.getString("Email");
         String CYC = extras.getString("Countrycode");
         String CNO = extras.getString("Cellnumber");
+        String DT = extras.getString("pickedDate");
         String IS = extras.getString("Issues");
         String DD = extras.getString("DetailDescription");
 
@@ -44,8 +45,8 @@ public class displayActivity extends AppCompatActivity {
 
         details.setText("*********COMPLAINT FORM*******" +
                 "**********\n"+"Name of Complainer:    "+su+ " "+FN+" "+LN+"\nEmployment status:    "+ES+"\nDesignation:    "+DS+"\nStreet no:    "+SNO+"\nStreet Name:    "+SN+"\nProvince:    "+
-                P+"\nCity:    "+CI+"Country:    "+CY+"\nPostal code:    "+PC+"\nEmail:    "+EM+"\nCountry Code:    "+CYC
-        +"\nCell Number:    "+CNO+"\nIssues:    "+IS+"\nDetailed Description:    "+DD);
+                P+"\nCity:    "+CI+"\nCountry:    "+CY+"\nPostal code:    "+PC+"\nEmail:    "+EM+"\nCountry Code:    "+CYC
+        +"\nCell Number:    "+CNO+"\nComplaint Issue Date:    "+DT+"\nIssues:    "+IS+"\nDetailed Description:    "+DD);
         details.setTextColor(Color.BLACK);
         details.setTextSize(18);
 

@@ -2,15 +2,22 @@ package com.example.exercise4android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView email;
     private TextView countrycode;
     private  TextView cellnumber;
+    private TextView Datetxt;
     private TextView detailDescription;
 
 
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.txt_Email);
         countrycode = findViewById(R.id.txtCountrycode);
         cellnumber = findViewById(R.id.txtCellNo);
+        Datetxt = findViewById(R.id.txtdate);
         detailDescription = findViewById(R.id.txtdescription);
         submit = findViewById(R.id.btnSubmit);
 
@@ -145,6 +154,38 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "onNothingSelected", Toast.LENGTH_SHORT).show();
             }
         });
+        final Calendar myCalendar = Calendar.getInstance();
+
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                String myFormat = "MM/dd/yy"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                Datetxt.setText(sdf.format(myCalendar.getTime()));
+
+            }
+
+        };
+
+        Datetxt.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(MainActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+
+        });
 
 
 
@@ -172,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 String Email = email.getText().toString();
                 String Countrycode = countrycode.getText().toString();
                 String Cellnumber = cellnumber.getText().toString();
+                String selecteddate = Datetxt.getText().toString();
                 String DetailDescription = detailDescription.getText().toString();
 
                 Intent mIntent = new Intent(MainActivity.this, displayActivity.class);
@@ -191,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
                 extras.putString("Email",Email);
                 extras.putString("Countrycode",Countrycode);
                 extras.putString("Cellnumber",Cellnumber);
+                extras.putString("pickedDate",selecteddate);
                 extras.putString("Issues",selectedissueItem);
                 extras.putString("DetailDescription",DetailDescription);
                 mIntent.putExtras(extras);
