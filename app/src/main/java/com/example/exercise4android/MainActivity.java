@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                
+
 
 
 
@@ -227,29 +227,78 @@ public class MainActivity extends AppCompatActivity {
                 String selecteddate = Datetxt.getText().toString();
                 String DetailDescription = detailDescription.getText().toString();
 
-                Intent mIntent = new Intent(MainActivity.this, displayActivity.class);
-                Bundle extras = new Bundle();
 
-                extras.putString("SuFix",selectedItem);
-                extras.putString("firstName",firstName);
-                extras.putString("lastName",lastName);
-                extras.putString("empStatus",selectedempItem);
-                extras.putString("Desgs",selecteddesgItem);
-                extras.putString("StreetNo",StreetNo);
-                extras.putString("StreetName",StreetName);
-                extras.putString("Province",Province);
-                extras.putString("City",City);
-                extras.putString("Country",Country);
-                extras.putString("Postalcode",Postalcode);
-                extras.putString("Email",Email);
-                extras.putString("Countrycode",Countrycode);
-                extras.putString("Cellnumber",Cellnumber);
-                extras.putString("pickedDate",selecteddate);
-                extras.putString("Issues",selectedissueItem);
-                extras.putString("DetailDescription",DetailDescription);
-                extras.putFloat("rating", rating.getRating());
-                mIntent.putExtras(extras);
-                startActivity(mIntent);
+                if(firstname.getText().toString().matches("") )
+                {
+                   firstname.setError("enter firstname");
+                }else if(lastname.getText().toString().matches(""))
+                {
+
+                    lastname.setError("enter lastname");
+                }else if (streetNo.getText().toString().matches(""))
+                {
+                    streetNo.setError("enter streetNo");
+                }else if(streetName.getText().toString().matches(""))
+                {
+                    streetName.setError("enter streetName");
+
+                } else if(province.getText().toString().matches(""))
+                {
+                    province.setError("enter province");
+
+                }else if(city.getText().toString().matches(""))
+                {
+                    city.setError("enter city");
+
+                }else if(country.getText().toString().matches(""))
+                {
+                    country.setError("enter country");
+
+                }else if(postalcode.getText().toString().matches(""))
+                {
+                    postalcode.setError("enter postalcode");
+
+                }else if(email.getText().toString().matches(""))
+                {
+                    email.setError("enter email");
+
+                }else if(countrycode.getText().toString().matches(""))
+                {
+                    countrycode.setError("enter countrycode");
+
+                }else if(cellnumber.getText().toString().matches(""))
+                {
+                    cellnumber.setError("enter cellnumber");
+
+                }else{
+
+
+                        Intent mIntent = new Intent(MainActivity.this, displayActivity.class);
+                        Bundle extras = new Bundle();
+
+                        extras.putString("SuFix", selectedItem);
+                        extras.putString("firstName", firstName);
+                        extras.putString("lastName", lastName);
+                        extras.putString("empStatus", selectedempItem);
+                        extras.putString("Desgs", selecteddesgItem);
+                        extras.putString("StreetNo", StreetNo);
+                        extras.putString("StreetName", StreetName);
+                        extras.putString("Province", Province);
+                        extras.putString("City", City);
+                        extras.putString("Country", Country);
+                        extras.putString("Postalcode", Postalcode);
+                        extras.putString("Email", Email);
+                        extras.putString("Countrycode", Countrycode);
+                        extras.putString("Cellnumber", Cellnumber);
+                        extras.putString("pickedDate", selecteddate);
+                        extras.putString("Issues", selectedissueItem);
+                        extras.putString("DetailDescription", DetailDescription);
+                        extras.putFloat("rating", rating.getRating());
+                        mIntent.putExtras(extras);
+                        startActivity(mIntent);
+
+
+                    }
              
 
             }
