@@ -2,17 +2,20 @@
     <string name="app_name">Exercise4Android</string>
     <string name="textview">TextView</string>
     <string-array name="suffix">
+        <item></item>
         <item>MR</item>
         <item>Miss</item>
         <item>Mrs</item>
         <item>DR</item>
     </string-array>
     <string-array name="employment">
+        <item></item>
         <item>Full Time</item>
         <item>Part Time</item>
         <item>Trainee</item>
     </string-array>
     <string-array name="designation">
+        <item></item>
         <item>Software Engineer</item>
         <item>Sr. Software Engineer</item>
         <item>Project Manager</item>
