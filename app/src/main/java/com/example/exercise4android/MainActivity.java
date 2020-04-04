@@ -238,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 String Cellnumber = cellnumber.getText().toString();
                 String selecteddate = Datetxt.getText().toString();
                 String DetailDescription = detailDescription.getText().toString();
+                Float grt = ratingbar.getRating();
 
 
                 if(firstname.getText().toString().matches("") )
@@ -286,27 +287,30 @@ public class MainActivity extends AppCompatActivity {
 
 
                         Intent mIntent = new Intent(MainActivity.this, displayActivity.class);
-                        Bundle extras = new Bundle();
+                       // Bundle extras = new Bundle();
 
-                        extras.putString("SuFix", selectedItem);
-                        extras.putString("firstName", firstName);
-                        extras.putString("lastName", lastName);
-                        extras.putString("empStatus", selectedempItem);
-                        extras.putString("Desgs", selecteddesgItem);
-                        extras.putString("StreetNo", StreetNo);
-                        extras.putString("StreetName", StreetName);
-                        extras.putString("Province", Province);
-                        extras.putString("City", City);
-                        extras.putString("Country", Country);
-                        extras.putString("Postalcode", Postalcode);
-                        extras.putString("Email", Email);
-                        extras.putString("Countrycode", Countrycode);
-                        extras.putString("Cellnumber", Cellnumber);
-                        extras.putString("pickedDate", selecteddate);
-                        extras.putString("Issues", selectedissueItem);
-                        extras.putString("DetailDescription", DetailDescription);
-                        extras.putFloat("rating", ratingbar.getRating());
-                        mIntent.putExtras(extras);
+                        complaintForm C1 = new complaintForm(selectedItem,firstName,lastName,selectedempItem,selecteddesgItem,StreetNo,StreetName,Province,City,Country,Postalcode,
+                                Email,Countrycode,Cellnumber,selecteddate,selectedissueItem,grt,DetailDescription );
+//
+//                        extras.putString("SuFix", selectedItem);
+//                        extras.putString("firstName", firstName);
+//                        extras.putString("lastName", lastName);
+//                        extras.putString("empStatus", selectedempItem);
+//                        extras.putString("Desgs", selecteddesgItem);
+//                        extras.putString("StreetNo", StreetNo);
+//                        extras.putString("StreetName", StreetName);
+//                        extras.putString("Province", Province);
+//                        extras.putString("City", City);
+//                        extras.putString("Country", Country);
+//                        extras.putString("Postalcode", Postalcode);
+//                        extras.putString("Email", Email);
+//                        extras.putString("Countrycode", Countrycode);
+//                        extras.putString("Cellnumber", Cellnumber);
+//                        extras.putString("pickedDate", selecteddate);
+//                        extras.putString("Issues", selectedissueItem);
+//                        extras.putString("DetailDescription", DetailDescription);
+//                        extras.putFloat("rating", ratingbar.getRating());
+                        mIntent.putExtra("object",C1);
                         startActivity(mIntent);
 
 

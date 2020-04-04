@@ -21,33 +21,35 @@ public class displayActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        String su = extras.getString("SuFix");
-        String FN = extras.getString("firstName");
-        String LN = extras.getString("lastName");
-        String ES = extras.getString("empStatus");
-        String DS = extras.getString("Desgs");
-        String SNO = extras.getString("StreetNo");
-        String SN = extras.getString("StreetName");
-        String P = extras.getString("Province");
-        String CI = extras.getString("City");
-        String CY = extras.getString("Country");
-        String PC = extras.getString("Postalcode");
-        String EM = extras.getString("Email");
-        String CYC = extras.getString("Countrycode");
-        String CNO = extras.getString("Cellnumber");
-        String DT = extras.getString("pickedDate");
-        String IS = extras.getString("Issues");
-        String DD = extras.getString("DetailDescription");
-        Float r = extras.getFloat("rating");
+        complaintForm C2 = (complaintForm) extras.getSerializable("object");
+
+//        String su = extras.getString("SuFix");
+//        String FN = extras.getString("firstName");
+//        String LN = extras.getString("lastName");
+//        String ES = extras.getString("empStatus");
+//        String DS = extras.getString("Desgs");
+//        String SNO = extras.getString("StreetNo");
+//        String SN = extras.getString("StreetName");
+//        String P = extras.getString("Province");
+//        String CI = extras.getString("City");
+//        String CY = extras.getString("Country");
+//        String PC = extras.getString("Postalcode");
+//        String EM = extras.getString("Email");
+//        String CYC = extras.getString("Countrycode");
+//        String CNO = extras.getString("Cellnumber");
+//        String DT = extras.getString("pickedDate");
+//        String IS = extras.getString("Issues");
+//        String DD = extras.getString("DetailDescription");
+//        Float r = extras.getFloat("rating");
 
 
 
 
 
         details.setText("*********COMPLAINT FORM*******" +
-                "**********\n"+"Name of Complainer:    "+su+ " "+FN+" "+LN+"\nEmployment status:    "+ES+"\nDesignation:    "+DS+"\nStreet no:    "+SNO+"\nStreet Name:    "+SN+"\nProvince:    "+
-                P+"\nCity:    "+CI+"\nCountry:    "+CY+"\nPostal code:    "+PC+"\nEmail:    "+EM+"\nCountry Code:    "+CYC
-        +"\nCell Number:    "+CNO+"\nComplaint Issue Date:    "+DT+"\nIssues:    "+IS+"\nSeverity:    "+r+"\nDetailed Description:    "+DD);
+                "**********\n"+"Name of Complainer:    "+C2.getSuffix()+ " "+C2.getFirstname()+" "+C2.getLastname()+"\nEmployment status:    "+C2.getEmpstatus()+"\nDesignation:    "+C2.getDesignation()+"\nStreet no:    "+C2.getStreetNo()+"\nStreet Name:    "+C2.getStreetName()+"\nProvince:    "+
+                C2.getEmpstatus()+"\nCity:    "+C2.getCity()+"\nCountry:    "+C2.getCountry()+"\nPostal code:    "+C2.getPostalcode()+"\nEmail:    "+C2.getEmailid()+"\nCountry Code:    "+C2.getCountryCode()
+        +"\nCell Number:    "+C2.getCellNumber()+"\nComplaint Issue Date:    "+C2.getIssuedate()+"\nIssues:    "+C2.getIssuetype()+"\nSeverity:    "+C2.getSevirty()+"\nDetailed Description:    "+C2.getDetailedDesc());
         details.setTextColor(Color.BLACK);
         details.setTextSize(18);
 
