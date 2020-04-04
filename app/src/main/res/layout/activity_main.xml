@@ -47,22 +47,67 @@
 
 
                 <TableRow android:layout_marginTop="10dp">
-
-                    <EditText
-                        android:id="@+id/first_name"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:hint="first name" />
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
 
-                    <EditText
-                        android:id="@+id/last_name"
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="first name">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout3"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:hint="last name" />
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:hint="last name">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <!--                    <EditText-->
+<!--                        android:id="@+id/first_name"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:hint="first name" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/last_name"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:hint="last name" />-->
                 </TableRow>
 
                 <TableRow android:layout_marginTop="10dp">
@@ -98,88 +143,270 @@
                 </TableRow>
 
                 <TableRow android:layout_marginTop="10dp">
-
-                    <EditText
-                        android:id="@+id/st_no"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="street no" />
-
-                    <EditText
-                        android:id="@+id/streetname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="street name" />
-
-
-                </TableRow>
-
-                <TableRow android:layout_marginTop="10dp">
-
-                    <EditText
-                        android:id="@+id/txtProvince"
-                        android:layout_width="30dp"
-
-                        android:layout_height="wrap_content"
-                        android:hint="provinence" />
-
-                    <EditText
-                        android:id="@+id/txtCity"
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:hint="city" />
-                </TableRow>
-
-                <TableRow android:layout_marginTop="10dp">
-
-                    <EditText
-                        android:id="@+id/txtCountry"
-                        android:layout_width="30dp"
-
-                        android:layout_height="wrap_content"
-                        android:hint="country" />
-
-                    <EditText
-                        android:id="@+id/txtPostalCode"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/stno"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-                        android:hint="postalcode" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/st_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="street no">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/st_no"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="street no" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/streetname1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/streetname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="street name">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/streetname"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="street name" />-->
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtProvince1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtProvince"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="provinence">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtProvince"-->
+<!--                        android:layout_width="30dp"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="provinence" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtCity1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="provinence">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtCity"-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="city" />-->
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtCountry1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="country">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtCountry"-->
+<!--                        android:layout_width="30dp"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="country" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtPostalCode1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtPostalCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="postalcode">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtPostalCode"-->
+<!--                        android:layout_width="match_parent"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="postalcode" />-->
                 </TableRow>
 
                 <TableRow
                     android:layout_marginTop="10dp"
                     android:duplicateParentState="false">
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
+<!--                    <TextView-->
+<!--                        android:id="@+id/textView"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Email" />-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txt_Email1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:text="Email" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
 
-                    <EditText
-                        android:id="@+id/txt_Email"
-                        android:layout_width="118dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Email id" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_Email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email id">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txt_Email"-->
+<!--                        android:layout_width="118dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Email id" />-->
                 </TableRow>
 
                 <TableRow android:layout_marginTop="10dp">
-
-                    <EditText
-                        android:id="@+id/txtCountrycode"
-                        android:layout_width="match_parent"
-
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtCountrycode1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:hint="country code" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
 
-                    <EditText
-                        android:id="@+id/txtCellNo"
-                        android:layout_width="match_parent"
 
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCountrycode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="country code">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtCountrycode"-->
+<!--                        android:layout_width="match_parent"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="country code" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtCellNo1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:hint="cell number" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCellNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="cell number">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtCellNo"-->
+<!--                        android:layout_width="match_parent"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="cell number" />-->
                 </TableRow>
 
                 <TableRow android:layout_marginTop="10dp">
@@ -233,20 +460,42 @@
                         android:stepSize="1" />
                 </TableRow>
 
-                <TableRow android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="detail description " />
-
-                    <EditText
-                        android:id="@+id/txtdescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="detail description " />-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtdescription1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:hint=" " />
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtdescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="detail description">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/txtdescription"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:hint=" " />-->
                 </TableRow>
 
                 <TableRow
