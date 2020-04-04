@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView countrycode;
     private  TextView cellnumber;
     private TextView Datetxt;
-    private RatingBar rating;
+    private RatingBar ratingbar;
     private TextView detailDescription;
     private Button CLear;
 
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         Datetxt = findViewById(R.id.txtdate);
         detailDescription = findViewById(R.id.txtdescription);
         submit = findViewById(R.id.btnSubmit);
-        rating = findViewById(R.id.ratingBar);
+        ratingbar = findViewById(R.id.ratingBar);
         CLear = findViewById(R.id.btnClear);
 
         ArrayAdapter<String>mStringArrayAdapter = new ArrayAdapter<>(MainActivity.this,
@@ -193,6 +196,15 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        ratingbar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+
+            @Override
+            public void onRatingChanged(final RatingBar ratingBar, final float rating, final boolean fromUser) {
+                setCurrentRating(rating);
+            }
+        });
+
+
 
 
 
@@ -264,11 +276,11 @@ public class MainActivity extends AppCompatActivity {
 
                 }else if(countrycode.getText().toString().matches(""))
                 {
-                    countrycode.setError("enter countrycode");
+                    countrycode.setError("enter country code");
 
                 }else if(cellnumber.getText().toString().matches(""))
                 {
-                    cellnumber.setError("enter cellnumber");
+                    cellnumber.setError("enter cell number");
 
                 }else{
 
@@ -293,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
                         extras.putString("pickedDate", selecteddate);
                         extras.putString("Issues", selectedissueItem);
                         extras.putString("DetailDescription", DetailDescription);
-                        extras.putFloat("rating", rating.getRating());
+                        extras.putFloat("rating", ratingbar.getRating());
                         mIntent.putExtras(extras);
                         startActivity(mIntent);
 
@@ -333,6 +345,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void setCurrentRating(float rating) {
+        LayerDrawable drawable = (LayerDrawable)ratingbar.getProgressDrawable();
+        if(drawable!=null) {
+            switch (Math.round(rating)) {
+                case 1:
+                    drawable.getDrawable(2).setColorFilter(getResources().getColor(R.color.cyan),PorterDuff.Mode.SRC_ATOP);
+                    break;
+                case 2:
+                    drawable.getDrawable(2).setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_ATOP);
+                    break;
+                case 3:
+                    drawable.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+                    break;
+                case 4:
+                    drawable.getDrawable(2).setColorFilter(getResources().getColor(R.color.orange),PorterDuff.Mode.SRC_ATOP);
+                    break;
+                case 5:
+                    drawable.getDrawable(2).setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
+                    break;
+            }
+
+        }
     }
 
 
